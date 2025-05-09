@@ -356,12 +356,6 @@ st.markdown("<h5 style='text-align: center; color:#3256db;'>👨‍💼 MANAGER 
 st.markdown("---")
 
 import os
-import streamlit as st
-import base64
-
-# Initialize session state for deletion
-if "delete_file" not in st.session_state:
-    st.session_state.delete_file = None
 
 # 🔐 Authentication
 st.markdown("## 📁 Plan Leaves & Trainings")
@@ -411,25 +405,34 @@ def list_and_display_files(folder, title):
             else:
                 st.write(f"📄 {file}")
 
-            # Safe delete option
+            # Delete option
             if auth:
                 if st.button(f"🗑️ Delete {file}", key=f"del_{file}"):
-                    st.session_state.delete_file = file_path
-                    st.experimental_rerun()
+                    os.remove(file_path)
+                    st.warning(f"Deleted {file}")
+                    st.rerun()
+
 
 # 👁️ Always visible for all users
 list_and_display_files(plan_leave_path, "Plan Leaves")
 list_and_display_files(training_path, "Trainings")
 
-# Handle deletion cleanly outside of loops
-if st.session_state.delete_file:
-    try:
-        os.remove(st.session_state.delete_file)
-        st.warning(f"Deleted {os.path.basename(st.session_state.delete_file)}")
-    except Exception as e:
-        st.error(f"Error deleting file: {e}")
-    st.session_state.delete_file = None
-    st.experimental_rerun()
+
+
+
+# ✅ Function to determine shift based on date
+def get_shift(duty_time, selected_date):
+    start_date = datetime.date(2025, 5, 4)
+    shift_intervals = [
+        (start_date + datetime.timedelta(days=7 * i), start_date + datetime.timedelta(days=7 * (i + 1) - 1))
+        for i in range(5)
+    ]
+    shifts = duty_time.split(",")
+    for i, (start, end) in enumerate(shift_intervals):
+        if start <= selected_date <= end:
+            return shifts[i] if i < len(shifts) else ""
+    return ""
+
 # Categorize teams based on shifts
 morning_shift  = []
 evening_shift = []
