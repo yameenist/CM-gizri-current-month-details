@@ -107,7 +107,7 @@ def load_data():
     "Karkun": "MUHAMMAD LUQMAN",
     "Karkun_Emp#": "P-1913",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E   Mon-Sat"
+    "Duty_Time":"E,N,M,E,  Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD ZEESHAN",
@@ -120,7 +120,7 @@ def load_data():
     "Karkun": "DANISH AHMED",
     "Karkun_Emp#": "MM-6598",
     "Off_Day": "Monday",
-    "Duty_Time":"E,N,M,E   Tue-Sun"
+    "Duty_Time":"E,N,M,E,  Tue-Sun"
   }
   ,
   {
@@ -134,7 +134,7 @@ def load_data():
     "Karkun": "IMRAN KHAN",
     "Karkun_Emp#": "0652",
     "Off_Day": "Thursday",
-    "Duty_Time":"N,M,E,N   Fri-wed"
+    "Duty_Time":"N,M,E,N,  Fri-wed"
   },
   {
     "Supervisor": "MASOOD ALI",
@@ -202,7 +202,7 @@ def load_data():
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "Wednesday",
-    "Duty_Time":"M,E,N,M   Thu-Tue"
+    "Duty_Time":"M,E,N,M,   Thu-Tue"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -331,7 +331,7 @@ def load_data():
     "Karkun": "MUHAMMAD ATIF",
     "Karkun_Emp#":"C-2850",
     "Off_Day": "Saturday",
-    "Duty_Time":"N,M,E,N   Sun-Fri",
+    "Duty_Time":"N,M,E,N,   Sun-Fri",
 
     
   }
@@ -356,6 +356,8 @@ st.markdown("<h5 style='text-align: center; color:#3256db;'>👨‍💼 MANAGER 
 st.markdown("---")
 
 import os
+import streamlit as st
+import base64
 
 # 🔐 Authentication
 st.markdown("## 📁 Plan Leaves & Trainings")
@@ -373,49 +375,53 @@ if auth:
     st.success("✅ Authenticated: You can upload or delete files.")
     upload_tab = st.radio("📂 Upload to Section:", ["Plan Leaves", "Trainings"])
     uploaded_file = st.file_uploader("📤 Upload File", type=["pdf", "jpg", "jpeg", "png"])
-    
+
     if uploaded_file is not None:
         save_folder = plan_leave_path if upload_tab == "Plan Leaves" else training_path
         file_path = os.path.join(save_folder, uploaded_file.name)
         with open(file_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
         st.success(f"✅ File uploaded to {upload_tab} successfully!")
+        st.rerun()
 
 def list_and_display_files(folder, title):
     st.markdown(f"### 📄 {title}")
-    files = os.listdir(folder)
+    files = sorted(os.listdir(folder))  # Sorted for consistency
     if not files:
         st.info("No files uploaded yet.")
     else:
-        for file in files:
+        for i, file in enumerate(files):
             file_path = os.path.join(folder, file)
-            if file.lower().endswith(('.png', '.jpg', '.jpeg')):
-                with open(file_path, "rb") as img_file:
-                    encoded = base64.b64encode(img_file.read()).decode()
-                st.markdown(
-                    f"""
-                    <div style="overflow:auto; border:1px solid #ddd; padding:10px; max-height:600px;">
-                        <img src="data:image/jpeg;base64,{encoded}" style="width:100%; max-width:1000px;"/>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-            elif file.lower().endswith('.pdf'):
-                st.markdown(f"📎 [View {file}](./{file_path})", unsafe_allow_html=True)
-            else:
-                st.write(f"📄 {file}")
+            col1, col2 = st.columns([5, 1])
 
-            # Delete option
+            with col1:
+                if file.lower().endswith(('.png', '.jpg', '.jpeg')):
+                    with open(file_path, "rb") as img_file:
+                        encoded = base64.b64encode(img_file.read()).decode()
+                    st.markdown(
+                        f"""
+                        <div style="overflow:auto; border:1px solid #ddd; padding:10px; max-height:600px;">
+                            <img src="data:image/jpeg;base64,{encoded}" style="width:100%; max-width:1000px;"/>
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+                elif file.lower().endswith('.pdf'):
+                    st.markdown(f"📎 [View {file}](./{file_path})", unsafe_allow_html=True)
+                else:
+                    st.write(f"📄 {file}")
+
             if auth:
-                if st.button(f"🗑️ Delete {file}", key=f"del_{file}"):
-                    os.remove(file_path)
-                    st.warning(f"Deleted {file}")
-                    st.rerun()
-
+                with col2:
+                    if st.button(f"🗑️", key=f"del_{title}_{i}"):
+                        os.remove(file_path)
+                        st.warning(f"Deleted: {file}")
+                        st.rerun()
 
 # 👁️ Always visible for all users
 list_and_display_files(plan_leave_path, "Plan Leaves")
 list_and_display_files(training_path, "Trainings")
+
 
 
 
