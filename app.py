@@ -359,18 +359,18 @@ import os
 import streamlit as st
 import base64
 
-# 🔐 Authentication
-st.markdown("## 📁 Plan Leaves & Trainings")
-password = st.text_input("🔐 Enter Password to Upload/Delete Files", type="password")
-auth = password == "@yamEEnkE"  # Replace with secure method in production
-
-# 📁 File storage paths
+# ---------------- Setup ---------------- #
 plan_leave_path = "plan_leaves"
 training_path = "trainings"
 os.makedirs(plan_leave_path, exist_ok=True)
 os.makedirs(training_path, exist_ok=True)
 
-# ⬆️ Uploads (Only for Authenticated Users)
+# ---------------- Authentication ---------------- #
+st.title("📁 Plan Leaves & Trainings")
+password = st.text_input("🔐 Enter Password to Upload/Delete Files", type="password")
+auth = password == "@yamEEnkE"
+
+# ---------------- Upload Section ---------------- #
 if auth:
     st.success("✅ Authenticated: You can upload or delete files.")
     upload_tab = st.radio("📂 Upload to Section:", ["Plan Leaves", "Trainings"])
@@ -382,15 +382,17 @@ if auth:
         with open(file_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
         st.success(f"✅ File uploaded to {upload_tab} successfully!")
-        st.rerun()
+        st.experimental_rerun()
 
+# ---------------- File Display & Delete ---------------- #
 def list_and_display_files(folder, title):
-    st.markdown(f"### 📄 {title}")
-    files = sorted(os.listdir(folder))  # Sorted for consistency
+    st.subheader(f"📂 {title}")
+    files = os.listdir(folder)
+
     if not files:
         st.info("No files uploaded yet.")
     else:
-        for i, file in enumerate(files):
+        for file in sorted(files):
             file_path = os.path.join(folder, file)
             col1, col2 = st.columns([5, 1])
 
@@ -400,27 +402,28 @@ def list_and_display_files(folder, title):
                         encoded = base64.b64encode(img_file.read()).decode()
                     st.markdown(
                         f"""
-                        <div style="overflow:auto; border:1px solid #ddd; padding:10px; max-height:600px;">
-                            <img src="data:image/jpeg;base64,{encoded}" style="width:100%; max-width:1000px;"/>
-                        </div>
+                        <img src="data:image/jpeg;base64,{encoded}" style="width:100%; max-width:800px;"/>
                         """,
-                        unsafe_allow_html=True,
+                        unsafe_allow_html=True
                     )
-                elif file.lower().endswith('.pdf'):
-                    st.markdown(f"📎 [View {file}](./{file_path})", unsafe_allow_html=True)
+                elif file.lower().endswith(".pdf"):
+                    st.markdown(f"📄 [View PDF: {file}](./{file_path})", unsafe_allow_html=True)
                 else:
                     st.write(f"📄 {file}")
 
-            if auth:
-                with col2:
-                    if st.button(f"🗑️", key=f"del_{title}_{i}"):
+            with col2:
+                if auth and st.button(f"🗑️ Delete", key=file):
+                    try:
                         os.remove(file_path)
-                        st.warning(f"Deleted: {file}")
-                        st.rerun()
+                        st.success(f"✅ Deleted: {file}")
+                        st.experimental_rerun()
+                    except Exception as e:
+                        st.error(f"⚠️ Error deleting {file}: {e}")
 
-# 👁️ Always visible for all users
+# ---------------- Display All Files ---------------- #
 list_and_display_files(plan_leave_path, "Plan Leaves")
 list_and_display_files(training_path, "Trainings")
+
 
 
 
