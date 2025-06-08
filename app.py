@@ -20,7 +20,7 @@ def load_data():
     data = [
         {   
             "Supervisor": "ZAHID HUSSAIN",
-            "Emp#": "80023543",
+            "Emp#": "80023543", 
             "Task": "CM",
             "Lineman": "M.YASIR",
             "Lineman_Emp#": "80022006",
@@ -29,33 +29,33 @@ def load_data():
             "Karkun": "MIRZA FAIZAN",
             "Karkun_Emp#": "1170",
             "Off_Day": "Sunday",
-            "Duty_Time": "M,M,M,M,   Mon-Sat"
+            "Duty_Time": "M,M,M,M,M,   Mon-Sat"
         },
   {
     "Supervisor": "M.IRFAN ARAIN",
     "Emp#":" 80023407",
     "Task": "CM",
-    "Lineman": "MUHAMMAD NASIR ALI",
-    "Lineman_Emp#": "80022310",
-    "Fitter": "IMRAN ALI",
-    "Fitter_Emp#": "80022216",
+    "Lineman": "MUSLIM",
+    "Lineman_Emp#": "80023758",
+    "Fitter": "JUNAID",
+    "Fitter_Emp#": "80022260",
     "Karkun": "ARSHAD",
     "Karkun_Emp#": "SE-7121",
-    "Off_Day": "Tuesday",
-    "Duty_Time":"M,M,M,M,    Wed-Mon"
+    "Off_Day": "Monday",
+    "Duty_Time":"M,E,N,M,E,    Tue-Sun"
   },
   {
     "Supervisor": "RIASAT ALI",
     "Emp#": "4599",
     "Task": "CM",
-    "Lineman": "SYED ZAMEER SHAH",
-    "Lineman_Emp#": "15215",
-    "Fitter": "SAMEER",
-    "Fitter_Emp#": "80021732",
+    "Lineman": "MUHAMMAD NASIR ALI",
+    "Lineman_Emp#": "80022310",
+    "Fitter": "IMRAN ALI",
+    "Fitter_Emp#": "80022216",
     "Karkun": "BABOO HAROON",
     "Karkun_Emp#": "11993",
     "Off_Day": "Friday",
-    "Duty_Time":"M,M,M,M,   Sat-Thu"
+    "Duty_Time":"M,M,M,M,M,   Sat-Thu"
   },
   {
     "Supervisor": "WASEEM-UR-REHMAN",
@@ -63,11 +63,12 @@ def load_data():
     "Task": "CM",
     "Lineman": "ARIF HUSSAIN",
     "Lineman_Emp#": "80022463",
-    "Fitter": "VACANT",
+    "Fitter": "SAMEER",
+    "Fitter_Emp#": "80021732",
     "Karkun": "SAJJAD",
     "Karkun_Emp#": "HK-574",
-    "Off_Day": "Monday",
-    "Duty_Time":"N,M,E,N,    Tue-Sun"
+    "Off_Day": "Tuesday",
+    "Duty_Time":"M,M,M,M,M    Wed-Mon"
   },
   {
     "Supervisor": "AKHTAR HUSSAIN",
@@ -80,7 +81,7 @@ def load_data():
     "Karkun": "MUHAMMAD SHAHID",
     "Karkun_Emp#":" 6598",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,E,E,E,   Mon-Sat"
+    "Duty_Time":"E,E,E,E,E,   Mon-Sat"
   },
 
   {
@@ -91,10 +92,10 @@ def load_data():
     "Lineman_Emp#": "80021985",
     "Fitter": "SHAHNAWAZ",
     "Fitter_Emp#": "80022870",
-    "Karkun": "ARSHAD",
-    "Karkun_Emp#": "P-0056",
+    "Karkun": "UMAR FAROOQ",
+    "Karkun_Emp#": "7997",
     "Off_Day": "Friday",
-    "Duty_Time":"E,E,E,E,    Sat-Thu"
+    "Duty_Time":"E,E,E,E,E,    Sat-Thu"
   },
   {
     "Supervisor": "SHEHZAD AHMED",
@@ -107,7 +108,7 @@ def load_data():
     "Karkun": "MUHAMMAD LUQMAN",
     "Karkun_Emp#": "P-1913",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E,  Mon-Sat"
+    "Duty_Time":"N,M,E,N,M,  Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD ZEESHAN",
@@ -120,21 +121,21 @@ def load_data():
     "Karkun": "DANISH AHMED",
     "Karkun_Emp#": "MM-6598",
     "Off_Day": "Monday",
-    "Duty_Time":"E,N,M,E,  Tue-Sun"
+    "Duty_Time":"N,M,E,N,M,  Tue-Sun"
   }
   ,
   {
     "Supervisor": "WAJID SOMROO",
-    "Emp#": "80018698",
+    "Emp#": "80018698",  
     "Task": "CM",
-    "Lineman": "MUHMMAD NADEEM",
-    "Lineman_Emp#": "14316",
+    "Lineman": "MUHMMAD DANISH",
+    "Lineman_Emp#": "80022618",
     "Fitter": "WAQAR AHMED",
     "Fitter_Emp#":" 10801",
     "Karkun": "IMRAN KHAN",
     "Karkun_Emp#": "0652",
     "Off_Day": "Thursday",
-    "Duty_Time":"N,M,E,N,  Fri-wed"
+    "Duty_Time":"M,E,N,N,E,  Fri-wed"
   },
   {
     "Supervisor": "MASOOD ALI",
@@ -142,12 +143,12 @@ def load_data():
     "Task": "CM",
     "Lineman": "FARHAN",
     "Lineman_Emp#": "80022281",
-    "Fitter": "ABDUL QADIR",
-    "Fitter_Emp#": "80022283",
-    "Karkun": "QADIR BUX",
-    "Karkun_Emp#": "P-0892",
+    "Fitter": "VACANT",
+    "Fitter_Emp#": "NONE",
+    "Karkun": "MUHAMMAD ATIF",
+    "Karkun_Emp#": "C-2850",
     "Off_Day": "Saturday",
-    "Duty_Time":"N,E,N,M,    Sun-Fri"
+    "Duty_Time":"E,N,M,E,N,    Sun-Fri"
   },
   {
     "Supervisor": "ALI REHAN",
@@ -160,7 +161,7 @@ def load_data():
     "Karkun": "SUALEH KHAN",
     "Karkun_Emp#": "P-1934",
     "Off_Day": "Sunday",
-    "Duty_Time":"M,M,E,M,    Mon-Sat"
+    "Duty_Time":"E,N,M,E,N,    Mon-Sat"
   }
   ,
   {
@@ -174,7 +175,7 @@ def load_data():
     "Karkun": "MUHAMMAD LAIQ",
     "Karkun_Emp#": "P-1942",
     "Off_Day": "Monday",
-    "Duty_Time":"M,E,N,M,    Tue-Sun"
+    "Duty_Time":"E,N,M,E,N,    Tue-Sun"
   }
   ,
   {
@@ -188,7 +189,7 @@ def load_data():
     "Karkun": "KASHIF AHMAD KHAN",
     "Karkun_Emp#": "HK-716",
     "Off_Day": "Sunday",
-    "Duty_Time":"M,M,M,M,   Mon-Sat"
+    "Duty_Time":"M,M,M,M,M,   Mon-Sat"
   }
   ,
   {
@@ -197,12 +198,12 @@ def load_data():
     "Task": "CM",
     "Lineman": "SARDAR",
     "Lineman_Emp#": "80023763",
-    "Fitter": "UMER FAROOQ",
-    "Fitter_Emp#": "7997",
+    "Fitter": "VACANT",
+    "Fitter_Emp#": "NONE",
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "Wednesday",
-    "Duty_Time":"M,E,N,M,   Thu-Tue"
+    "Duty_Time":"E,N,M,M,N,   Thu-Tue"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -212,10 +213,10 @@ def load_data():
     "Lineman_Emp#": "11917",
     "Fitter": "JUNAID",
     "Fitter_Emp#": "80022260",
-    "Karkun": "IRFAN AHMED KHAN",
-    "Karkun_Emp#": "C-2835",
+    "Karkun": "ARSHAD",
+    "Karkun_Emp#": "P-0056",
     "Off_Day": "Thursday",
-    "Duty_Time":"M,E,N,M,   Fri-Wed"
+    "Duty_Time":"E,N,M,E,N,  Fri-Wed"
   },
   {
     "Supervisor": "SHABBER",
@@ -223,24 +224,24 @@ def load_data():
     "Task": "CM",
     "Lineman": "MUQARRAM SHAH",
     "Lineman_Emp#":" 8698",
-    "Fitter": "NOOR HASAN",
-    "Karkun": "FARAZ",
-    "Karkun_Emp#": "SE-7123",
-    "Off_Day": "Wednesday",
-    "Duty_Time":"E,N,E,N,   Thu-Tue",
+    "Fitter": "VACANT",
+    "Karkun": "NOOR HASSAN",
+    "Karkun_Emp#": "NONE",
+    "Off_Day": "Tuesday",
+    "Duty_Time":"N,N,E,N,E,   Wed-Mon",
   },
   {
     "Supervisor": "ALTAF",
     "Emp#": "12592",
     "Task": "CM",
-    "Lineman": "none",
-    "Lineman_Emp#": "",
+    "Lineman": "MUHAMMAD ZAMEER SHAH",
+    "Lineman_Emp#": "15215",
     "Fitter": "none",
     "Fitter_Emp#": "none",
-    "Karkun": "none",
-    "Karkun_Emp#": "none",
-    "Off_Day": "Sunday",
-    "Duty_Time":"E,M,E,M,   Mon-Sat"
+    "Karkun": "IRFAN AHMED KHAN",
+    "Karkun_Emp#": "C-2835",
+    "Off_Day": "Tuesday",
+    "Duty_Time":"N,E,N,E,N,   Wed-Mon"
   },
   {
     "Supervisor": "MANSOOB",
@@ -250,8 +251,8 @@ def load_data():
     "Lineman_Emp#": "none",
     "Fitter": "none",
     "Fitter_Emp#": "none",
-    "Karkun": "none",
-    "Karkun_Emp#": "none",
+    "Karkun": "FARAZ",
+    "Karkun_Emp#": "SE-7132",
     "Off_Day": "Sunday",
     "Duty_Time":"M,M,M,M,   Mon-Sat",
   },
@@ -279,7 +280,7 @@ def load_data():
     "Karkun": "ARIF HUSSAIN",
     "Karkun_Emp#": "1157",
     "Off_Day": "Thursday",
-    "Duty_Time":"E,N,M,E,   Fri-Wed",
+    "Duty_Time":"N,M,E,N,M,   Fri-Wed",
   },
   {
     "Supervisor": "ZEESHAN SHAIKH",
@@ -292,7 +293,7 @@ def load_data():
     "Karkun": "MUHAMMAD KAMRAN",
     "Karkun_Emp#": "MMA-4693",
     "Off_Day": "Wednesday",
-    "Duty_Time":"N,M,M,E,   Thu-Tue",
+    "Duty_Time":"M,M,E,M,M,   Thu-Tue",
   },
   {
     "Supervisor": "NABEEL",
@@ -302,10 +303,10 @@ def load_data():
     "Lineman_Emp#": "80022050",
     "Fitter": "AQIL AHMED",
     "Fitter_Emp#":" 80023039",
-    "Karkun": "JOHN",
-    "Karkun_Emp#": "241",
+    "Karkun": "QADIR BUX",
+    "Karkun_Emp#": "P-0892",
     "Off_Day": "Saturday",
-    "Duty_Time":"E,N,M,E,   Sun-Fri",
+    "Duty_Time":"N,M,E,N,M,   Sun-Fri",
   },
   {
     "Supervisor": "ALFRED YOUSAF",
@@ -318,20 +319,20 @@ def load_data():
     "Karkun": "VISHAL MUNAWAR",
     "Karkun_Emp#": "F-KE-0605",
     "Off_Day": "Sunday",
-    "Duty_Time":"N,E,N,N,   Mon-Sat",
+    "Duty_Time":"M,E,N,M,E,   Mon-Sat",
   },
   {
     "Supervisor": "IMRAN KHAN",
     "Emp#":" 80023400",
     "Task": "CM",
-    "Lineman": "MUHAMMAD DANISH",
-    "Lineman_Emp#":" 80022618",
+    "Lineman": "MUHAMMAD NADEEM",
+    "Lineman_Emp#":"14316",
     "Fitter": "FAROOQ",
     "Fitter_Emp#":"80023268",
-    "Karkun": "MUHAMMAD ATIF",
-    "Karkun_Emp#":"C-2850",
+    "Karkun": "JHON",
+    "Karkun_Emp#":"241",
     "Off_Day": "Saturday",
-    "Duty_Time":"N,M,E,N,   Sun-Fri",
+    "Duty_Time":"M,E,N,M,E,   Sun-Fri",
 
     
   }
@@ -347,10 +348,10 @@ with col1:
     st.image("https://vtlogo.com/wp-content/uploads/2020/03/k-electric-vector-logo.png", width=120)
 
 with col2:
-    selected_date = st.date_input("📅 Select Date", current_date, min_value=current_date, max_value=datetime.date(2025, 5, 31))
+    selected_date = st.date_input("📅 Select Date", current_date, min_value=datetime.date(2025, 6 , 1), max_value=datetime.date(2025, 7, 5))
 
 # ✅ Display Titles
-st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (4th MAY TO 31st MAY)</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (1st JUNE TO 5th JULY)</h4>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>🤵‍♂️ DGM CM Mr REHAN MURTAZA</h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>👨‍💼 MANAGER CM Mr SAJID MEHMOOD</h5>", unsafe_allow_html=True)
 st.markdown("---")
@@ -431,7 +432,7 @@ list_and_display_files(training_path, "Trainings")
 
 # ✅ Function to determine shift based on date
 def get_shift(duty_time, selected_date):
-    start_date = datetime.date(2025, 5, 4)
+    start_date = datetime.date(2025, 6, 1)
     shift_intervals = [
         (start_date + datetime.timedelta(days=7 * i), start_date + datetime.timedelta(days=7 * (i + 1) - 1))
         for i in range(5)
