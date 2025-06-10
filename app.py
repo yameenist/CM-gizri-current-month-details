@@ -365,22 +365,31 @@ import base64
 # ---------------- Setup ---------------- #
 plan_leave_path = "plan_leaves"
 training_path = "trainings"
-os.makedirs(plan_leave_path, exist_ok=True)
-os.makedirs(training_path, exist_ok=True)
+announcement_path = "announcements"  # ✅ NEW folder for announcements
+
+# Create folders if they don't exist
+for path in [plan_leave_path, training_path, announcement_path]:
+    os.makedirs(path, exist_ok=True)
 
 # ---------------- Authentication ---------------- #
-st.title("📁 Plan Leaves & Trainings")
+st.title("📁 Plan Leaves, Trainings & Announcements")
 password = st.text_input("🔐 Enter Password to Upload/Delete Files", type="password")
 auth = password == "@yamEEnkE"
 
 # ---------------- Upload Section ---------------- #
 if auth:
     st.success("✅ Authenticated: You can upload or delete files.")
-    upload_tab = st.radio("📂 Upload to Section:", ["Plan Leaves", "Trainings"])
+    upload_tab = st.radio("📂 Upload to Section:", ["Plan Leaves", "Trainings", "Announcements"])
     uploaded_file = st.file_uploader("📤 Upload File", type=["pdf", "jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
-        save_folder = plan_leave_path if upload_tab == "Plan Leaves" else training_path
+        if upload_tab == "Plan Leaves":
+            save_folder = plan_leave_path
+        elif upload_tab == "Trainings":
+            save_folder = training_path
+        else:
+            save_folder = announcement_path
+
         file_path = os.path.join(save_folder, uploaded_file.name)
         with open(file_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
@@ -415,7 +424,7 @@ def list_and_display_files(folder, title):
                     st.write(f"📄 {file}")
 
             with col2:
-                if auth and st.button(f"🗑️ Delete", key=file):
+                if auth and st.button(f"🗑️ Delete", key=f"{title}_{file}"):
                     try:
                         os.remove(file_path)
                         st.success(f"✅ Deleted: {file}")
@@ -426,6 +435,7 @@ def list_and_display_files(folder, title):
 # ---------------- Display All Files ---------------- #
 list_and_display_files(plan_leave_path, "Plan Leaves")
 list_and_display_files(training_path, "Trainings")
+list_and_display_files(announcement_path, "Announcements")  # ✅ New section
 
 
 
