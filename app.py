@@ -12,7 +12,9 @@ current_date = current_time.date()
 
 
 # ✅ Set Page Config at the very top
-st.set_page_config(page_title="CM Gizri Roster", layout="wide")
+st.set_page_config(page_title="CM gizri Roaster App",
+    page_icon="📊",  # or link to your favicon
+    layout="wide")
 
 
 # ✅ Load Data Function
