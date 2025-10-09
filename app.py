@@ -31,7 +31,7 @@ def load_data():
             "Karkun": "ARSHAD",
             "Karkun_Emp#": "SE7121",
             "Off_Day": "Sunday",
-            "Duty_Time": "M,M,M,M,M,   Mon-Sat"
+            "Duty_Time": "M,M,M,M,   Mon-Sat"
         },
   {
     "Supervisor": "M.IRFAN ARAIN",
@@ -57,7 +57,7 @@ def load_data():
     "Karkun": "BABOO HAROON",
     "Karkun_Emp#": "11993",
     "Off_Day": "Friday",
-    "Duty_Time":"M,M,M,M,M,   Sat-Thu"
+    "Duty_Time":"M,M,M,M,   Sat-Thu"
   },
   {
     "Supervisor": "WASEEM-UR-REHMAN",
@@ -83,7 +83,7 @@ def load_data():
     "Karkun": "IRFAN AHMED KHAN",
     "Karkun_Emp#":" C-2835",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,E,E,E,E,   Mon-Sat"
+    "Duty_Time":"E,E,E,E,   Mon-Sat"
   },
 
   {
@@ -97,7 +97,7 @@ def load_data():
     "Karkun": "MUHAMMAD SHAHID",
     "Karkun_Emp#": "6598",
     "Off_Day": "Friday",
-    "Duty_Time":"E,E,E,E,E,    Sat-Thu"
+    "Duty_Time":"E,E,E,E,    Sat-Thu"
   },
   {
     "Supervisor": "SHEHZAD AHMED",
@@ -110,7 +110,7 @@ def load_data():
     "Karkun": "MUHAMMAD LUQMAN",
     "Karkun_Emp#": "P-1913",
     "Off_Day": "Sunday",
-    "Duty_Time":"N,M,E,N,M,  Mon-Sat"
+    "Duty_Time":"N,M,E,N,  Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD ZEESHAN",
@@ -123,7 +123,7 @@ def load_data():
     "Karkun": "DANISH AHMED",
     "Karkun_Emp#": "MM-6598",
     "Off_Day": "Monday",
-    "Duty_Time":"N,M,E,N,M,  Tue-Sun"
+    "Duty_Time":"N,M,E,N,  Tue-Sun"
   }
   ,
   {
@@ -561,5 +561,6 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
