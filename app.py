@@ -217,8 +217,8 @@ def load_data():
     "Fitter": "VACANT",
     "Karkun": "ARSHAD",
     "Karkun_Emp#": "P-0056",
-    "Off_Day": "THURSDAY",
-    "Duty_Time":"M,E,N,M "
+    "Off_Day": "Thursday",
+    "Duty_Time":"M,E,N,M, "
   },
   {
     "Supervisor": "ALTAF",
@@ -230,7 +230,7 @@ def load_data():
     "Fitter_Emp#": "none",
     "Karkun": "QADIR BUX",
     "Karkun_Emp#": "P-0892",
-    "Off_Day": "THURSDAY",
+    "Off_Day": "Thursday",
     "Duty_Time":"N,M,E,N, "
   },
   {
@@ -340,7 +340,7 @@ with col2:
     selected_date = st.date_input("📅 Select Date", current_date, min_value=datetime.date(2025, 10 , 5), max_value=datetime.date(2025, 11, 1))
 
 # ✅ Display Titles
-st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (1st JUNE TO 5th JULY)</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (5TH OCTUBER TO 1ST NOVEMBER)</h4>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>🤵‍♂️ GM CM Mr JAVED RAZA</h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>🤵‍♂️ DGM CM Mr REHAN MURTAZA</h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>👨‍💼 MANAGER CM Mr SAJID MEHMOOD</h5>", unsafe_allow_html=True)
@@ -561,4 +561,5 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
