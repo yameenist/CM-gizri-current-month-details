@@ -44,7 +44,7 @@ def load_data():
     "Karkun": "RIZWAN",
     "Karkun_Emp#": "C-2966",
     "Off_Day": "SATURDAY",
-    "Duty_Time":"M,E,N,M,"
+    "Duty_Time":"M,E,N,M,   Sun-Fri"
   },
   {
     "Supervisor": "RIASAT ALI",
@@ -179,7 +179,7 @@ def load_data():
     "Karkun": "FARAZ",
     "Karkun_Emp#": "SE-7123",
     "Off_Day": "SATURDAY",
-    "Duty_Time":"E,N,M,E,"
+    "Duty_Time":"E,N,M,E,   Sun-Fri"
   }
   ,
   {
@@ -193,7 +193,7 @@ def load_data():
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "SUNDAY",
-    "Duty_Time":"E,N,M,E,"
+    "Duty_Time":"E,N,M,E,    Mon-Sun"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -218,7 +218,7 @@ def load_data():
     "Karkun": "ARSHAD",
     "Karkun_Emp#": "P-0056",
     "Off_Day": "Thursday",
-    "Duty_Time":"M,E,N,M, "
+    "Duty_Time":"M,E,N,M,  Fri-Wed "
   },
   {
     "Supervisor": "ALTAF",
@@ -231,7 +231,7 @@ def load_data():
     "Karkun": "QADIR BUX",
     "Karkun_Emp#": "P-0892",
     "Off_Day": "Thursday",
-    "Duty_Time":"N,M,E,N, "
+    "Duty_Time":"N,M,E,N,   Fri-Wed "
   },
   {
     "Supervisor": "MANSOOB",
@@ -255,8 +255,8 @@ def load_data():
     "Fitter_Emp#": "none",
     "Karkun": "none",
     "Karkun_Emp#": "none",
-    "Off_Day": "none",
-    "Duty_Time":"none",
+    "Off_Day": "SUNDAY",
+    "Duty_Time":"M,M,M,M, Mon-Sat"
   },
   {
     "Supervisor": "NADEEM SARWAR",
@@ -269,7 +269,7 @@ def load_data():
     "Karkun": "UMAR FAROOQ",
     "Karkun_Emp#": "7997",
     "Off_Day": "SUNDAY",
-    "Duty_Time":"M,M,M,M,"
+    "Duty_Time":"M,M,M,M,  Mon-Sat"
   },
   {
     "Supervisor": "ZEESHAN SHAIKH",
@@ -282,7 +282,7 @@ def load_data():
     "Karkun": "MUHAMMAD ATIF",
     "Karkun_Emp#": "C-2850",
     "Off_Day": "Wednesday",
-    "Duty_Time":"M,M,M,M,"
+    "Duty_Time":"M,M,M,M,   Thu-Tue"
   },
   {
     "Supervisor": "NABEEL",
@@ -295,7 +295,7 @@ def load_data():
     "Karkun": "JHON",
     "Karkun_Emp#": "241",
     "Off_Day": "TUESDAY",
-    "Duty_Time":"M,E,N,M"
+    "Duty_Time":"M,E,N,M   Thu-Tue"
   },
   {
     "Supervisor": "ALFRED YOUSAF",
@@ -561,6 +561,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
