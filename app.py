@@ -435,7 +435,7 @@ def get_shift(duty_time, selected_date):
     start_date = datetime.date(2025, 5, 10)
     shift_intervals = [
         (start_date + datetime.timedelta(days=7 * i), start_date + datetime.timedelta(days=7 * (i + 1) - 1))
-        for i in range(4)
+        for i in range(7)
     ]
     shifts = duty_time.split(",")
     for i, (start, end) in enumerate(shift_intervals):
@@ -561,6 +561,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
