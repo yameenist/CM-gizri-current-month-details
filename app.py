@@ -431,17 +431,17 @@ list_and_display_files(announcement_path, "Announcements")  # ✅ New section
 
 
 def get_shift(duty_time, selected_date):
-    duty_time = duty_time.replace("Morning", "M").replace("Evening", "E").replace("Night", "N")
-    parts = duty_time.split(',')
-    shifts = [s.strip() for s in parts if s.strip() in ['M', 'E', 'N']]
-    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    start_date = datetime.date(2025, 5, 10)
+    shift_intervals = [
+        (start_date + datetime.timedelta(days=7 * i), start_date + datetime.timedelta(days=7 * (i + 1) - 1))
+        for i in range(7)
+    ]
+    shifts = duty_time.split(",")
+    for i, (start, end) in enumerate(shift_intervals):
+        if start <= selected_date <= end:
+            return shifts[i] if i < len(shifts) else ""
+    return ""
 
-    weekday = selected_date.strftime("%a")
-    if weekday not in days or not shifts:
-        return ""
-
-    shift_index = days.index(weekday) % len(shifts)
-    return shifts[shift_index]
 
 
 
@@ -563,6 +563,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
