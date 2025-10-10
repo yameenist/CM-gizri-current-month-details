@@ -70,7 +70,7 @@ def load_data():
     "Karkun": "SAJJAD",
     "Karkun_Emp#": "HK-574",
     "Off_Day": "Saturday",
-    "Duty_Time":"N,M,E,N,    Wed-Mon"
+    "Duty_Time":"N,M,E,N,  Sun-Fri"
   },
   {
     "Supervisor": "AKHTAR HUSSAIN",
@@ -193,7 +193,7 @@ def load_data():
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E,    Mon-Sun"
+    "Duty_Time":"E,N,M,E,    Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -295,7 +295,7 @@ def load_data():
     "Karkun": "JHON",
     "Karkun_Emp#": "241",
     "Off_Day": "Tuesday",
-    "Duty_Time":"M,E,N,M   Thu-Tue"
+    "Duty_Time":"M,E,N,M   Thu-Mon"
   },
   {
     "Supervisor": "ALFRED YOUSAF",
@@ -321,7 +321,7 @@ def load_data():
     "Karkun": "DANISH HUSSAIN",
     "Karkun_Emp#":"1157",
     "Off_Day": "Monday",
-    "Duty_Time":"M,E,N,M,   Sun-Fri",
+    "Duty_Time":"M,E,N,M,   Tue-Sun",
 
     
   }
@@ -564,6 +564,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
