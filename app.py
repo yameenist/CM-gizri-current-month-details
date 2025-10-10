@@ -43,7 +43,7 @@ def load_data():
     "Fitter_Emp#": "80023268",
     "Karkun": "RIZWAN",
     "Karkun_Emp#": "C-2966",
-    "Off_Day": "SATURDAY",
+    "Off_Day": "Saturday",
     "Duty_Time":"M,E,N,M,   Sun-Fri"
   },
   {
@@ -69,7 +69,7 @@ def load_data():
     "Fitter_Emp#": "80022868",
     "Karkun": "SAJJAD",
     "Karkun_Emp#": "HK-574",
-    "Off_Day": "SATURDAY",
+    "Off_Day": "Saturday",
     "Duty_Time":"N,M,E,N,    Wed-Mon"
   },
   {
@@ -136,8 +136,8 @@ def load_data():
     "Fitter_Emp#":" 23286",
     "Karkun": "IMRAN KHAN",
     "Karkun_Emp#": "0652",
-    "Off_Day": "TUESDAY",
-    "Duty_Time":"N,M,E,N,"
+    "Off_Day": "Tuesday",
+    "Duty_Time":"N,M,E,N,  Wed-Mon"
   },
 
   {
@@ -178,7 +178,7 @@ def load_data():
     "Fitter_Emp#": "80023614",
     "Karkun": "FARAZ",
     "Karkun_Emp#": "SE-7123",
-    "Off_Day": "SATURDAY",
+    "Off_Day": "Saturday",
     "Duty_Time":"E,N,M,E,   Sun-Fri"
   }
   ,
@@ -192,7 +192,7 @@ def load_data():
     "Fitter_Emp#": "NONE",
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
-    "Off_Day": "SUNDAY",
+    "Off_Day": "Sunday",
     "Duty_Time":"E,N,M,E,    Mon-Sun"
   },
   {
@@ -255,7 +255,7 @@ def load_data():
     "Fitter_Emp#": "none",
     "Karkun": "none",
     "Karkun_Emp#": "none",
-    "Off_Day": "SUNDAY",
+    "Off_Day": "Sunday",
     "Duty_Time":"M,M,M,M, Mon-Sat"
   },
   {
@@ -268,7 +268,7 @@ def load_data():
     "Fitter_Emp#": "5726",
     "Karkun": "UMAR FAROOQ",
     "Karkun_Emp#": "7997",
-    "Off_Day": "SUNDAY",
+    "Off_Day": "Sunday",
     "Duty_Time":"M,M,M,M,  Mon-Sat"
   },
   {
@@ -294,7 +294,7 @@ def load_data():
     "Fitter_Emp#":" 10801",
     "Karkun": "JHON",
     "Karkun_Emp#": "241",
-    "Off_Day": "TUESDAY",
+    "Off_Day": "Tuesday",
     "Duty_Time":"M,E,N,M   Thu-Tue"
   },
   {
@@ -308,7 +308,7 @@ def load_data():
     "Karkun": "VISHAL MUNAWAR",
     "Karkun_Emp#": "F-KE-0605",
     "Off_Day": "Sunday",
-    "Duty_Time":"M,E,N,M,   Mon-Sat",
+    "Duty_Time":"M,E,N,M,   Mon-Sat"
   },
   {
     "Supervisor": "IMRAN KHAN",
@@ -320,7 +320,7 @@ def load_data():
     "Fitter_Emp#":"80022283",
     "Karkun": "DANISH HUSSAIN",
     "Karkun_Emp#":"1157",
-    "Off_Day": "MONDAY",
+    "Off_Day": "Monday",
     "Duty_Time":"M,E,N,M,   Sun-Fri",
 
     
@@ -561,6 +561,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
