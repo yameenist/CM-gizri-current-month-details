@@ -1,5 +1,4 @@
-import streamlit as st
-import pandas as pd
+import streamlit as Emport pandas as pd
 import datetime
 import pytz
 import base64
@@ -165,7 +164,7 @@ def load_data():
     "Karkun": "MUHAMMAD LAIQ",
     "Karkun_Emp#": "P-1942",
     "Off_Day": "Monday",
-    "Duty_Time":"E,N,M,E,   Tue-Sun"
+    "Duty_Time":"E,N,M,E, Tue-Sun"
   }
   ,
   {
@@ -179,7 +178,7 @@ def load_data():
     "Karkun": "FARAZ",
     "Karkun_Emp#": "SE-7123",
     "Off_Day": "Saturday",
-    "Duty_Time":"E,N,M,E,   Sun-Fri"
+    "Duty_Time":"E,N,M,E, Sun-Fri"
   }
   ,
   {
@@ -193,7 +192,7 @@ def load_data():
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E,    Mon-Sat"
+    "Duty_Time":"E,N,M,E,  Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -563,6 +562,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
