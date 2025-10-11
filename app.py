@@ -193,7 +193,7 @@ def load_data():
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
     "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E,  Mon-Sat"
+    "Duty_Time":"E,N,M,E",  "Mon-Sat"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -295,7 +295,7 @@ def load_data():
     "Karkun": "JHON",
     "Karkun_Emp#": "241",
     "Off_Day": "Tuesday",
-    "Duty_Time":"M,E,N,M   Thu-Mon"
+    "Duty_Time":"M,E,N,M,   Thu-Mon"
   },
   {
     "Supervisor": "ALFRED YOUSAF",
@@ -576,6 +576,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
