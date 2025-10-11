@@ -308,7 +308,7 @@ def load_data():
     "Karkun": "VISHAL MUNAWAR",
     "Karkun_Emp#": "F-KE-0605",
     "Off_Day": "Sunday",
-    "Duty_Time":"M,E,N,M,   Mon-Sat"
+    "Duty_Time":"M,E,N,M,  Mon-Sat"
   },
   {
     "Supervisor": "IMRAN KHAN",
@@ -321,7 +321,7 @@ def load_data():
     "Karkun": "DANISH HUSSAIN",
     "Karkun_Emp#":"1157",
     "Off_Day": "Monday",
-    "Duty_Time":"M,E,N,M,   Tue-Sun",
+    "Duty_Time":"M,E,N,M, Tue-Sun",
 
     
   }
@@ -453,7 +453,9 @@ def get_shift(duty_time, selected_date):
 
     return shifts[week_index]
 
-
+for _, row in data.iterrows():
+    shift = get_shift(row['Duty_Time'], selected_date)
+    print(f"{row['Supervisor']} → {shift}")  # 👈 Add this line
 
 
 # Categorize teams based on shifts
@@ -574,6 +576,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
