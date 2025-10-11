@@ -431,16 +431,27 @@ list_and_display_files(announcement_path, "Announcements")  # ✅ New section
 
 
 def get_shift(duty_time, selected_date):
+    import datetime
+
+    # Define pattern start date
     start_date = datetime.date(2025, 10, 5)
-    shift_intervals = [
-        (start_date + datetime.timedelta(days=7 * i), start_date + datetime.timedelta(days=7 * (i + 1) - 1))
-        for i in range(7)
-    ]
-    shifts = duty_time.split(",")
-    for i, (start, end) in enumerate(shift_intervals):
-        if start <= selected_date <= end:
-            return shifts[i] if i < len(shifts) else ""
-    return ""
+
+    # Split and clean up the duty pattern
+    shifts = [s.strip() for s in duty_time.split(",") if s.strip()]
+
+    if not shifts:
+        return ""
+
+    # Calculate number of days since start
+    days_since_start = (selected_date - start_date).days
+
+    if days_since_start < 0:
+        return ""  # before start date, no duty
+
+    # Each shift lasts 7 days (weekly rotation)
+    week_index = (days_since_start // 7) % len(shifts)
+
+    return shifts[week_index]
 
 
 
@@ -563,6 +574,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
