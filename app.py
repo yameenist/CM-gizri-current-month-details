@@ -192,8 +192,8 @@ def load_data():
     "Fitter_Emp#": "NONE",
     "Karkun": "KHALID",
     "Karkun_Emp#": "C-2894",
-    "Off_Day": "Sunday",
-    "Duty_Time":"E,N,M,E",  "Mon-Sat"
+    "Off_Day": "Tuesday",
+    "Duty_Time":"E,N,M,E,   Wed-Mon"
   },
   {
     "Supervisor": "MUHAMMAD YAMEEN",
@@ -576,6 +576,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
