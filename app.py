@@ -337,12 +337,11 @@ with col1:
     st.image("https://vtlogo.com/wp-content/uploads/2020/03/k-electric-vector-logo.png", width=120)
 
 with col2:
-    selected_date = st.date_input("📅 Select Date", current_date, min_value=datetime.date(2025, 10 , 5), max_value=datetime.date(2025, 11, 1))
+    selected_date = st.date_input("📅 Select Date", current_date, min_value=datetime.date(2025, 11 , 2), max_value=datetime.date(2025, 12, 6))
 
 # ✅ Display Titles
 st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (5TH OCTUBER TO 1ST NOVEMBER)</h4>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>🤵‍♂️ GM CM Mr JAVED RAZA</h5>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center; color:#3256db;'>🤵‍♂️ DGM CM Mr REHAN MURTAZA</h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color:#3256db;'>👨‍💼 MANAGER CM Mr SAJID MEHMOOD</h5>", unsafe_allow_html=True)
 st.markdown("---")
 
@@ -576,6 +575,7 @@ if selected_name and selected_name.strip():
 # ✅ Footer
 st.markdown("<hr style='border: 1px solid #ddd;'>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-size: 14px; color: #555;'>🚀 This application is created by <b>Muhammad Yameen Saleem</b></p>", unsafe_allow_html=True)
+
 
 
 
