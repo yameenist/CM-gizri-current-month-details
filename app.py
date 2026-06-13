@@ -337,7 +337,7 @@ with col1:
     st.image("https://vtlogo.com/wp-content/uploads/2020/03/k-electric-vector-logo.png", width=120)
 
 with col2:
-    selected_date = st.date_input("📅 Select Date", current_date, min_value=datetime.date(2026, 06 , 2), max_value=datetime.date(2026, 07, 6))
+    selected_date = st.date_input("13 Select Date", current_date, min_value=datetime.date(2026, 06 , 2), max_value=datetime.date(2026, 07, 6))
 
 # ✅ Display Titles
 st.markdown("<h4 style='text-align: center; color:#3498db;'>📋 DUTY ROASTER CM GIZRI (5TH OCTUBER TO 1ST NOVEMBER)</h4>", unsafe_allow_html=True)
